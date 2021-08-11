@@ -1,0 +1,49 @@
+[
+    {
+        "title": "Mr",
+        "firstName": "Amjad",
+        "lastName": "M",
+        "email": "Amjad.m@kanban.com",
+        "role": "User",
+        "password": "123456",
+        "id": 1,
+        "dateCreated": "2021-04-08T05:33:05.184Z",
+        "dateUpdated": "2021-08-10T00:15:11.076Z"
+    },
+    {
+        "title": "Mr",
+        "firstName": "Ahmad.3",
+        "lastName": "a",
+        "email": "amjad@kanban.com",
+        "role": "Admin",
+        "password": "123456",
+        "id": 2,
+        "dateCreated": "2021-08-09T09:33:51.499Z",
+        "dateUpdated": "2021-08-09T09:33:51.499Z"
+    },
+    {
+        "email": "amjad@test.com",
+        "password": "123456",
+        "id": 3,
+        "dateCreated": "2021-08-10T15:13:23.863Z",
+        "dateUpdated": "2021-08-10T15:13:23.863Z"
+    },
+    {
+        "email": "",
+        "password": "",
+        "id": 4,
+        "dateCreated": "2021-08-10T15:15:50.966Z",
+        "dateUpdated": "2021-08-10T15:15:50.967Z"
+    },
+    {
+        "title": "Mr",
+        "firstName": "Amjad",
+        "lastName": "Amjad",
+        "email": "harry@fg.com",
+        "role": "Admin",
+        "password": "123456",
+        "id": 5,
+        "dateCreated": "2021-08-10T16:56:00.650Z",
+        "dateUpdated": "2021-08-10T16:56:00.650Z"
+    }
+]
