@@ -1,4 +1,5 @@
 import React from "react";
+import { taskService } from "services";
 
 function dragging(Component) {
   class Dragging extends React.Component {
@@ -9,6 +10,7 @@ function dragging(Component) {
     forDragStart = ev => {
       const { data } = this.props;
       this.onDragStart(ev, data.id);
+     
     };
 
     onDragStart = (ev, id) => {
@@ -16,6 +18,8 @@ function dragging(Component) {
         return { dragging: !prevState.dragging };
       });
       ev.dataTransfer.setData("text/html", id);
+       
+      
     };
 
     render() {
@@ -25,6 +29,7 @@ function dragging(Component) {
           {...this.state}
           forDragStart={this.forDragStart}
           onDragStart={this.onDragStart}
+          
         />
       );
     }

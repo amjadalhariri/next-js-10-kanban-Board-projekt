@@ -1,4 +1,5 @@
-export const normalizedTasks = [
+export const normalizedTasks = 
+[
   {
     id: "a1lgjfek",
     type: "backlog",

@@ -1,3 +1,4 @@
+import Index from "pages/users";
 import React from "react";
 
 class Child extends React.Component {
@@ -13,6 +14,7 @@ class Child extends React.Component {
         </section>
         <section className="kanban__main">
           <div className="kanban__main-wrapper" />
+          <Index />
         </section>
       </React.Fragment>
     );

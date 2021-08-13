@@ -1,4 +1,4 @@
-import { WHO_OPEN } from "components/constants";
+import { WHO_OPEN } from "../constants";
 
 export default (whoIsOpen = true, action) => {
   const { type, payload } = action;

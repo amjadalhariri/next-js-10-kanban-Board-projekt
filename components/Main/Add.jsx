@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import Form from "./Form.jsx";
 import { connect } from "react-redux";
-import { whoIsOpen } from "../actions";
+import { whoIsOpen } from "../../actions";
 //import { normalizedTasks } from "../../pages/api/data";
 class Add extends React.Component {
   render() {

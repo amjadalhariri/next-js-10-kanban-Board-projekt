@@ -2,7 +2,8 @@ import React from "react";
 import ClassNames from "classnames";
 import { connect } from "react-redux";
 import dragging from "../../hoc/dragging";
-import { deleteTask } from "../actions/";
+import { deleteTask } from "../../actions";
+import { taskService } from "services";
 
 class Card extends React.PureComponent {
   render() {
@@ -12,6 +13,7 @@ class Card extends React.PureComponent {
       card: true,
       "card-dragging": dragging
     });
+    
     return (
       <div className={dragAndDrop} draggable="true" onDragStart={forDragStart}>
         <div className="card__header">
@@ -38,14 +40,14 @@ class Card extends React.PureComponent {
               <div className="attach-num">{data.attach}</div>
             </div>
           </div>
-          <div className="card__menu-right">
+          {/* <div className="card__menu-right">
             <div className="add-peoples">
               <i className="material-icons">add</i>
             </div>
-            <div className="img-avatar">
+            {/* <div className="img-avatar">
               <img src={data.avatar} />
-            </div>
-          </div>
+            </div> 
+          </div> */}
         </div>
       </div>
     );
@@ -54,9 +56,15 @@ class Card extends React.PureComponent {
   handleDelete = () => {
     const { data, deleteTask } = this.props;
     deleteTask(data.id);
+    delTask(data.id);
   };
 }
 
+function delTask(id) {
+  return taskService.delete(id).then(() => {
+    // router.push(".");
+  });
+}
 export default connect(
   null,
   { deleteTask }

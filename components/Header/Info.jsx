@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-//import img from "../../assets/img/thompson.jpg";
+//import img from "../../assets/img/cobain.jpg";
 //import Image from "next/image";
 
 class Info extends React.Component {
@@ -8,13 +8,9 @@ class Info extends React.Component {
       <Fragment>
         <div className="name-user">M. Amjad</div>
         <div className="avatar-user">
-          {/* <img
-            src={img}
-            alt="me"
-            width="64"
-            height="64"
-          /> */}
-          ;{/* <img src={require("../../assets/img/thompson.jpg")} /> */}
+          {/* <img src={img} alt="me" width="64" height="64" /> */}
+
+          {/* <img src={`${process.env.PUBLIC_URL}/assets/img/cobain.jpg`} /> */}
         </div>
       </Fragment>
     );

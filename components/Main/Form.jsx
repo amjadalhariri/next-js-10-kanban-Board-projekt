@@ -1,10 +1,9 @@
 import React from "react";
 import { connect } from "react-redux";
-import { addTask } from "../actions/";
+import { addTask } from "../../actions";
 import setNewTask from "../../hoc/setNewTask";
 import PrivatePage from "hoc/upload";
 import { taskService } from "services/task.service";
-
 
 class Form extends React.Component {
   
@@ -70,7 +69,9 @@ class Form extends React.Component {
         <div className="add-card-form__footer">
           <div className="form__footer">
             <div className="form__footer-av">
-              {/* <img src={require("../../assets/img/thompson.jpg")} /> */}
+              {/* <img
+                src={`${process.env.PUBLIC_URL}/assets/img/cobain.jpg`}
+              /> */}
             </div>
 
             <div className="attach-ico">
@@ -101,17 +102,17 @@ class Form extends React.Component {
     console.log(this.props);
     ev.preventDefault();
     addTask(this.props);
-    onSubmit(this.state);
+    createTask(this.props);
   };
 }
-function onSubmit(data) {
-  return createTask(data);
-}
+// function onSubmit(data) {
+//   return createTask(data);
+// }
  function createTask(data) {
   return taskService
     .create(data)
     .then(() => {
-      router.push(".");
+     // router.push(".");
     });
 }
 export default connect(

@@ -18,8 +18,17 @@ function getById(id) {
   return tasks.find((x) => x.id.toString() === id.toString());
 }
 
-function create({ type, priority, user, text, comments, attach }) {
-  const task = { type, priority, user, text, comments, attach };
+function create({
+  type,
+  style,
+  avatar,
+  priority,
+  user,
+  text,
+  comments,
+  attach,
+}) {
+  const task = { type,avatar, style, priority, user, text, comments, attach };
 
   // generate new task id
   task.id = tasks.length ? Math.max(...tasks.map((x) => x.id)) + 1 : 1;
@@ -32,8 +41,8 @@ function create({ type, priority, user, text, comments, attach }) {
   tasks.push(task);
   saveData();
 }
-function update(id, { type, priority, user, text, comments, attach }) {
-  const params = { type, priority, user, text, comments, attach };
+function update(id, { type,style,avatar, priority, user, text, comments, attach }) {
+  const params = { type,style,avatar, priority, user, text, comments, attach };
   const task = tasks.find((x) => x.id.toString() === id.toString());
 
 

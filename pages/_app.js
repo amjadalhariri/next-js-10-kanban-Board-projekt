@@ -1,12 +1,10 @@
 import "styles/index.css";
 import Head from "next/head";
-
+import { AppProps } from "next/app";
 // import "styles/globals.css";
 import { Nav, Alert } from "components";
 
-export default App;
-
-function App({ Component, pageProps }) {
+export default function App({ Component, pageProps }) {
   return (
     <>
       <Head>
@@ -23,7 +21,10 @@ function App({ Component, pageProps }) {
         <Nav />
         <Alert />
         <div className="container pt-4 pb-4">
-          <Component {...pageProps} />
+<div suppressHydrationWarning>
+      {typeof window === 'undefined' ? null : <Component {...pageProps} />}
+    </div>
+          {/* <Component {...pageProps} /> */}
         </div>
       </div>
 
@@ -39,3 +40,6 @@ function App({ Component, pageProps }) {
     </>
   );
 }
+
+
+

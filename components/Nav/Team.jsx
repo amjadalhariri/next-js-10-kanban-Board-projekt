@@ -17,7 +17,7 @@ class Team extends React.Component {
         <div className="kanban__nav-avs-img">
           <img src={require("../../assets/img/cobain.jpg")} />
         </div> */}
-        <Invite />
+        {/* <Invite /> */}
       </div>
     );
   }

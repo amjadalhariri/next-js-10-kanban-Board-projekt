@@ -2,33 +2,35 @@ import React from "react";
 
 function setNewTask(Component) {
   class SetNewTask extends React.Component {
-    state = {
-      id: "",
-      type: "",
-      priority: "",
-      user: "M. Thompson",
-      text: "",
-      avatar: "./41aad055f35eb28f42b84ca1b4cf5d53.jpg",
-      comments: "0",
-      attach: "0",
-      style: ""
-    };
+    state = 
+      {
+        id:"",
+        type: "",
+        style: "",
+        avatar: "",
+        priority: "",
+        user: "M.Amjad",
+        text: "",
+        comments: "0",
+        attach: "0",
+      }
+    ;
 
-    handleOption = ev => {
+    handleOption = (ev) => {
       const { value, alt } = ev.target;
       this.setState({
         style: value,
-        priority: alt
+        priority: alt,
       });
     };
 
-    handleChange = ev => {
+    handleChange = (ev) => {
       const { type } = this.props;
       const { value } = ev.target;
       if (value.length < limits.max)
         return this.setState({
           text: value,
-          type: type
+          type: type,
         });
     };
 

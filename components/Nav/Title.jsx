@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { boardOpen } from "../actions/";
+import { boardOpen } from "../../actions";
 
 //class Title extends React.Component {
   const page = (Page) => {
